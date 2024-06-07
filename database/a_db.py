@@ -12,6 +12,7 @@ class AsyncDatabase:
     async def create_tables(self):
         async with aiosqlite3.connect(self.db_path) as db:
             await db.execute(sql_queries.CREATE_USER_TABLE_QUERY)
+            await db.execute(sql_queries.CREATE_PROFILE_TABLE_QUERY)
 
             await db.commit()
             print("Database connected successfully")
