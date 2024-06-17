@@ -79,7 +79,7 @@ async def process_photo(message: types.Message,
             message.from_user.id,
             data['name'],
             data['bio'],
-            "media" + file_path
+            "media/" + file_path
         ),
         fetch="none"
     )
