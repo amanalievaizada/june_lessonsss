@@ -3,7 +3,7 @@ import re
 
 from aiogram import Router, types
 from aiogram.filters import Command
-from aiogram.types import CallbackQuery, FSInputFile
+from aiogram.types import CallbackQuery, FSInputFile, InlineKeyboardMarkup, InlineKeyboardButton
 
 from config import bot
 from database.a_db import AsyncDatabase
@@ -85,3 +85,4 @@ async def dislike_detect_call(call: CallbackQuery,
     )
 
     await all_profiles_call(call=call)
+
